@@ -1,0 +1,119 @@
+.footer {
+  background-image: url(../img/footer_back.png);
+  height: 448px;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  &__img {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 86px 0 0 0;
+  }
+
+  &__wrp {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img-person {
+    border-radius: 50%;
+  }
+
+  &__form {
+    padding: 150px 80px 0 0;
+  }
+
+  &__form-text {
+    @include font(24px, 38px, 700, normal);
+    //font-size: 24px;
+    //font-weight: 700;
+    //line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__form-subtext {
+    @include font(18px, 22px, 400, normal);
+    //font-size: 18px;
+    //font-weight: 400;
+    //line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__form-input {
+    border-radius: 200px 0px 0px 200px;
+    background-color: #e1e1e1;
+    height: 49px;
+    width: 322px;
+    padding: 0 0 0 22px;
+    border: none;
+    margin: 32px 0 0 0;
+  }
+
+  &__form-btn {
+    border-radius: 0px 200px 200px 0px;
+    background-color: $pink-color;
+    color: #fff;
+    width: 100px;
+    height: 49px;
+    border: none;
+    margin: 32px 0 0 0;
+  }
+
+  &__form-btn:hover {
+    background-color: $gray-color;
+  }
+
+  &__form-btn:active {
+    outline: 2px solid $gray-color;
+  }
+
+  &__social {
+    background-color: $black;
+    height: 80px;
+    margin: 126px auto;
+  }
+
+  &__social-wrp {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  &__social-brand {
+    @include font(16px, 19px, 400, normal);
+    color: $white-color;
+    //font-size: 16px;
+    //font-weight: 400;
+    //line-height: 19px;
+    align-self: center;
+  }
+
+  &__social-list {
+    display: flex;
+    align-self: center;
+  }
+
+  &__social-item {
+    padding: 0 7px 0 0;
+  }
+
+  &__social-item {
+    background-color: transparent;
+  }
+
+  &__social-item:hover .footer__social-icon {
+    fill: $pink-color;
+  }
+
+  &__social-icon:active {
+    outline: 1px solid azure;
+  }
+
+  &__social-icon {
+    fill: $white-color;
+  }
+}

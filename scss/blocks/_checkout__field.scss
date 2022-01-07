@@ -1,0 +1,133 @@
+.checkout {
+  &__form {
+    display: block;
+  }
+
+  &__field-title {
+    @include font(16px, 19px, 300);
+    //font-size: 16px;
+    //font-weight: 300;
+    //line-height: 19px;
+    padding: 0 0 0 0;
+    text-transform: uppercase;
+  }
+
+  &__field-input {
+    min-width: 360px;
+    height: 45px;
+    padding: 0 0 0 16px;
+    margin: 20px 0 0 0;
+    opacity: 0.7;
+    outline-color: $gray-color;
+  }
+
+  &__subtitle {
+    position: relative;
+  }
+
+  &__subtitle-price {
+    color: $pink-color;
+  }
+
+  &__total-price {
+    color: $pink-color;
+    padding: 0 0 0 10px;
+  }
+
+  &__subtitle-number {
+    position: absolute;
+    color: $gray-color;
+    width: 43px;
+    height: 24px;
+    left: 100px;
+    bottom: 5px;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    border: 1px solid;
+    margin: 0 0 0 40px;
+  }
+
+  &__item-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__proceed-btn {
+    width: 273px;
+    height: 50px;
+    font-size: 11px;
+    border: none;
+    color: $white-color;
+    background-color: $pink-color;
+    text-transform: uppercase;
+    margin: 17px 0 0 0;
+  }
+
+  &__proceed-btn:hover {
+    background-color: $gray-color;
+  }
+
+  &__proceed-btn:active {
+    outline: 2px solid $gray-color;
+  }
+
+  &__field-btn {
+    width: 100px;
+    height: 34px;
+    border-width: 1px;
+    font-size: 11px;
+    color: gray;
+    border-color: $gray-color;
+    background-color: transparent;
+    text-transform: uppercase;
+    margin: 24px 0 0 0;
+  }
+
+  &__field-btn-wrp {
+    display: flex;
+    justify-content: space-between;
+    max-width: 652px;
+    margin: 0 0 128px 0;
+  }
+
+  &__field-btn-next {
+    width: 244px;
+    height: 49px;
+    border-width: 1px;
+    border-color: $gray-color;
+    text-transform: uppercase;
+    color: gray;
+    background-color: transparent;
+  }
+
+  &__total-list {
+    width: 360px;
+    height: 214px;
+    background-color: #f5f3f3;
+    margin: 57px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__sub-total {
+    @include font(11px, 13px, 400);
+    //font-size: 11px;
+    //font-weight: 400;
+    //line-height: 13px;
+    padding: 0 34px 12px 0;
+    text-align: end;
+    text-transform: uppercase;
+  }
+
+  &__grand-total {
+    @include font(16px, 19px, 400);
+    //font-size: 16px;
+    //font-weight: 400;
+    //line-height: 19px;
+    padding: 0 34px 21px 0;
+    text-align: end;
+    text-transform: uppercase;
+  }
+}

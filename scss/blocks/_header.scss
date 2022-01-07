@@ -1,0 +1,70 @@
+.header {
+  background-color: $black;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+
+  &__wrp {
+    @include flex-between;
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+  }
+
+  &__logo-form-wrp {
+    @include flex-center;
+  }
+
+  &__search {
+    display: flex;
+    margin: 0 0 0 41px;
+  }
+
+  &__search-btn {
+    background: transparent;
+    border: none;
+  }
+
+  &__search-form {
+    margin: 0 0 0 5px;
+    height: 40px;
+  }
+
+  &__menu-btn {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__link-reg {
+    text-decoration: none;
+    margin: 0 0 0 33px;
+  }
+
+  &__link-basket {
+    text-decoration: none;
+    margin: 0 0 0 33px;
+  }
+}
+
+.header__nav {
+  display: none;
+}
+
+.white-icon {
+  fill: white;
+}
+
+.header__search-btn:hover .white-icon,
+.header__search-btn:hover .white-icon,
+.header__menu-btn:hover .white-icon,
+.header__link-reg:hover .white-icon,
+.header__link-basket:hover .white-icon {
+  fill: red;
+}
+
+.header__search-btn:active,
+.header__menu-btn:active,
+.header__link-reg:active,
+.header__link-basket:active {
+  outline: 1px solid azure;
+}

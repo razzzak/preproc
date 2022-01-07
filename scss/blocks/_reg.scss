@@ -1,0 +1,17 @@
+/*Registration*/
+
+.reg {
+  height: 148px;
+  background-color: #f8f3f4;
+  display: flex;
+
+  &__title {
+    @include font(24px, 29px, 400);
+    //font-size: 24px;
+    //font-weight: 400;
+    //line-height: 29px;
+    color: $pink-color;
+    text-transform: uppercase;
+    align-self: center;
+  }
+}

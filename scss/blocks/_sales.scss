@@ -1,0 +1,104 @@
+.sales {
+  &__item {
+    width: 360px;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid gold;*/
+    flex-direction: column;
+  }
+
+  &__list {
+    margin: 64px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item--woman {
+    background-image: url(../img/for-women.jpg);
+  }
+
+  &__item--men {
+    background-image: url(../img/for-men.jpg);
+  }
+
+  &__item--kids {
+    background-image: url(../img/for-kids.jpg);
+  }
+
+  &__item--shoes {
+    width: 100%;
+    margin: 30px 0 0 0;
+    background-image: url(../img/acces.jpg);
+    background-repeat: no-repeat;
+  }
+
+  &__item-title {
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__item-text {
+    @include font(24px, 29px, 700);
+    //font-size: 24px;
+    //font-weight: 700;
+    //line-height: 29px;
+    text-transform: uppercase;
+    color: $pink-color;
+  }
+
+  &__item-text--shoes {
+    padding: 0 0 56px 0;
+  }
+
+  /*-------Затемнение Sales---------*/
+
+  &__cart-overlay {
+    position: relative;
+  }
+
+  &__cart-shoes-overlay {
+    position: relative;
+  }
+
+  &__cart-overlay:before {
+    content: "";
+    width: 100%;
+    min-height: 260px;
+    background: #211616;
+    position: absolute;
+    top: 0;
+    display: none;
+    opacity: 70%;
+  }
+
+  &__cart:hover .sales__cart-overlay:before {
+    display: block;
+  }
+
+  &__cart-shoes {
+    width: 100%;
+  }
+
+  &__cart-shoes-overlay:before {
+    content: "";
+    width: 100%;
+    min-height: 180px;
+    background: #211616;
+    position: absolute;
+    top: 0;
+    display: none;
+    opacity: 70%;
+  }
+
+  &__cart-shoes:hover &__cart-shoes-overlay:before {
+    display: block;
+  }
+
+  &__cart-shoes:hover &__text {
+    display: block;
+  }
+}
+/*----------------*/
