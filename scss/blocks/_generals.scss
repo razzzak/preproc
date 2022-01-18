@@ -13,6 +13,7 @@ blockquote {
   font-weight: 400;
   line-height: 24px;
   text-align: center;
+  margin: 53px 0 0 0;
 }
 
 form {
@@ -34,7 +35,7 @@ body {
 }
 
 .container {
-  width: 71%;
+  width: 1140px;
   margin: 0 auto;
   /*border: 1px solid green;*/
 }
@@ -48,16 +49,4 @@ body {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
-}
-
-@media (max-width: $tablet-width) {
-  .container {
-    width: 96%;
-  }
-}
-
-@media (max-width: $mobile-width) {
-  .container {
-    width: 91%;
-  }
 }
