@@ -1,6 +1,6 @@
 .sales {
   &__item {
-    width: 360px;
+    max-width: 360px;
     min-height: 260px;
     display: flex;
     align-items: center;
@@ -14,25 +14,41 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item--woman {
     background-image: url(../img/for-women.jpg);
+    background-repeat: no-repeat;
   }
 
   &__item--men {
     background-image: url(../img/for-men.jpg);
+    background-repeat: no-repeat;
   }
 
   &__item--kids {
     background-image: url(../img/for-kids.jpg);
+    background-repeat: no-repeat;
+
+    @include mobile {
+      margin: 0 0 32px 0;
+    }
   }
 
   &__item--shoes {
-    width: 100%;
+    max-width: 100%;
     margin: 30px 0 0 0;
     background-image: url(../img/acces.jpg);
     background-repeat: no-repeat;
+
+    @include mobile {
+      min-width: 343px;
+      margin: 0 auto;
+    }
   }
 
   &__item-title {
@@ -42,15 +58,24 @@
 
   &__item-text {
     @include font(24px, 29px, 700);
-    //font-size: 24px;
-    //font-weight: 700;
-    //line-height: 29px;
     text-transform: uppercase;
     color: $pink-color;
   }
 
   &__item-text--shoes {
     padding: 0 0 56px 0;
+  }
+
+  &__cart {
+    width: 30%;
+    @include tablet {
+      padding: 32px 0 0 0;
+    }
+
+    @include mobile {
+      width: 91%;
+      margin: 0 auto;
+    }
   }
 
   /*-------Затемнение Sales---------*/
@@ -101,4 +126,3 @@
     display: block;
   }
 }
-/*----------------*/
