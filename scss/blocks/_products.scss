@@ -107,7 +107,7 @@
     padding: 14px 40px 14px 40px;
     margin: 63px 0 0 0;
   }
-
+  &__button-text:hover,
   &__button:hover {
     color: red;
   }
@@ -128,9 +128,5 @@
   &__link:active,
   &__button:active {
     outline: 1px solid azure;
-  }
-
-  .white-icon {
-    fill: azure;
   }
 }
