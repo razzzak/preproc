@@ -29,6 +29,9 @@
   &__search-form {
     margin: 0 0 0 5px;
     height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding: 0 0 0 10px;
   }
 
   &__menu {
@@ -103,6 +106,10 @@
 }
 
 .display-block {
+  display: block;
+}
+
+.header__ {
   display: block;
 }
 

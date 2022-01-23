@@ -33,10 +33,25 @@ body {
   margin: 0 auto;
 }
 
+.icon {
+  color: $black;
+  font-size: 30px;
+}
+
+.normal {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
 .container {
   width: 71%;
   margin: 0 auto;
-  /*border: 1px solid green;*/
+  //border: 1px solid green;
 }
 
 .visually-hidden {
