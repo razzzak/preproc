@@ -46,8 +46,9 @@
     background-repeat: no-repeat;
 
     @include mobile {
-      min-width: 343px;
+      //min-width: 343px;
       margin: 0 auto;
+      min-width: 100%;
     }
   }
 
@@ -92,7 +93,7 @@
     content: "";
     width: 100%;
     min-height: 260px;
-    background: #211616;
+    background-color: #211616;
     position: absolute;
     top: 0;
     display: none;

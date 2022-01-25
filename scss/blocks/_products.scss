@@ -39,7 +39,7 @@
   .overlay {
     width: 100%;
     height: 420px;
-    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
   }
@@ -50,14 +50,17 @@
   }
 
   &__button {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: color 0.5s linear;
     background-color: transparent;
     color: #fff;
     padding: 13px 13px;
-    border: none;
+    //border: 1px solid red;
   }
 
   &__button-text {
@@ -104,8 +107,12 @@
     text-decoration: none;
     color: $pink-color;
     border: 1px solid;
+    transition: color 0.5s linear;
     padding: 14px 40px 14px 40px;
     margin: 63px 0 0 0;
+  }
+  &__button-text:hover {
+    color: red;
   }
 
   &__button:hover {
@@ -128,9 +135,5 @@
   &__link:active,
   &__button:active {
     outline: 1px solid azure;
-  }
-
-  .white-icon {
-    fill: azure;
   }
 }

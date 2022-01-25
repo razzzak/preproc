@@ -6,6 +6,10 @@
     flex-direction: column;
   }
 
+  &__ul-wrp {
+    margin: 0 auto;
+  }
+
   &__list {
     width: 652px;
 
@@ -115,6 +119,10 @@
     @include mobile {
       margin: 48px 0 0 0;
     }
+  }
+
+  &__proceed-btn {
+    transition: background-color 0.5s linear;
   }
 
   &__sub-total {

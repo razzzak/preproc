@@ -89,22 +89,24 @@
 
   &__form-input {
     border-radius: 200px 0px 0px 200px;
-    background-color: #e1e1e1;
+    background-color: $gray-color;
+    opacity: 0.3;
     height: 49px;
     width: 322px;
     padding: 0 0 0 22px;
-    border: none;
     margin: 32px 0 0 0;
+    color: transparent;
   }
 
   &__form-btn {
     border-radius: 0px 200px 200px 0px;
     background-color: $pink-color;
-    color: #fff;
+    color: $white-color;
     width: 100px;
     height: 49px;
     border: none;
     margin: 32px 0 0 0;
+    transition: background-color 0.5s linear;
   }
 
   &__form-btn:hover {
