@@ -1,5 +1,15 @@
 .features {
-  border: 1px solid rgb(167, 167, 167);
+  border: 1px solid #c9c9c9;
+  transform: translate(0, -60px);
+  background-color: #fff;
+
+  @media (max-width: $tablet-width) {
+    transform: translate(0);
+  }
+
+  @media (max-width: $mobile-width) {
+    transform: translate(0);
+  }
 
   &__top-block {
     width: 100%;
@@ -74,9 +84,16 @@
     align-items: center;
     justify-content: center;
     border: 1px solid $pink-color;
+    transition: background-color 0.5s linear;
+  }
+
+  &__button-text {
+    color: $pink-color;
+    padding: 0 0 0 10px;
   }
 
   &__btn:hover {
+    border-color: white;
     background-color: $gray-color;
   }
 

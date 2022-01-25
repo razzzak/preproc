@@ -10,6 +10,23 @@
     margin: 0 0 128px 0;
   }
 
+  &-item-title {
+    @include font(13px, 16px, 400);
+    padding: 0 0 0 18px;
+    text-transform: uppercase;
+  }
+
+  &-item-text {
+    @include font(14px, 17px, 300);
+    padding: 13px 28px 18px 18px;
+    color: $gray-color;
+  }
+
+  &-price {
+    padding: 0 0 20px 18px;
+    color: $pink-color;
+  }
+
   &-item {
     width: 360px;
     background-color: #f8f8f8;
@@ -34,22 +51,16 @@
     width: 100%;
   }
 
-  &-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    color: #fff;
-    padding: 13px 13px;
-    border: none;
+  .overlay,
+  .product__pages-button {
+    display: none;
   }
 
-  &-button:hover {
+  &__button:hover {
     color: red;
   }
 
-  &-button:hover .white-icon {
+  &__button:hover .white-icon {
     fill: red;
   }
 
@@ -60,11 +71,11 @@
     text-decoration: none;
   }
 
-  &-button:hover .white-icon {
+  &__button:hover .white-icon {
     fill: red;
   }
 
-  &-button:active {
+  &__button:active {
     outline: 1px solid azure;
   }
 

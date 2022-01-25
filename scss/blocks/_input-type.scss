@@ -1,39 +1,36 @@
 [type="email"] {
   display: block;
-  box-sizing: border-box;
 }
 
 [type="adress"],
-[type="field-email"],
-[type="first-name"],
-[type="last-name"],
+[type="email"],
+[type="text"],
+[type="text"],
 [type="password"],
-[type="postcode"],
-[type="state"] {
+[type="number"] {
   display: block;
   outline: 1px solid;
-  background: transparent;
   border: none;
   opacity: 0.5;
 }
 
-[type="adress"]:hover,
-[type="adress"]:focus,
 [type="password"]:hover,
 [type="password"]:focus,
-[type="postcode"]:hover,
-[type="postcode"]:focus,
+[type="number"]:hover,
+[type="number"]:focus,
 [type="email"]:hover,
 [type="email"]:focus,
-[type="field-email"]:hover,
-[type="field-email"]:focus,
-[type="first-name"]:hover,
-[type="first-name"]:focus,
-[type="last-name"]:hover,
-[type="last-name"]:focus,
-[type="state"]:hover,
-[type="state"]:focus,
+[type="text"]:hover,
+[type="text"]:focus,
 [type="search"]:hover,
 [type="search"]:focus {
   outline: 0.5px solid red;
+}
+
+[type="search"]::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+[type="email"]::-webkit-input-placeholder {
+  color: $white-color;
 }
