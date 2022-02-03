@@ -1,21 +1,209 @@
 .cart {
-  height: 148px;
-  background-color: #f8f3f4;
-  display: flex;
-  margin: 0 0 96px 0;
+  width: 57%;
 
   @include tablet {
-    margin: 0 0 59px 0;
-  }
-
-  &__title {
-    @include font(24px, 29px, 400, normal);
-    color: $pink-color;
-    text-transform: uppercase;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 40px;
+    width: 100%;
   }
 
   @include mobile {
-    text-align: center;
+    margin: 0 auto 48px;
+  }
+
+  &-wrp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 96px auto 128px;
+
+    @include tablet {
+      margin: 59px auto 128px;
+    }
+
+    @include mobile {
+      margin: 39px auto 96px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin: 0 0 40px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include mobile {
+      margin: 0 0 32px;
+    }
+
+    &-img {
+      object-fit: cover;
+      width: 40%;
+
+      @include tablet {
+        width: 35%;
+        height: 100%;
+      }
+
+      @include mobile {
+        width: 40%;
+        height: 100%;
+      }
+    }
+
+    &-info {
+      position: relative;
+      padding: 22px 0 0 31px;
+      background-color: $total-white;
+
+      @include tablet {
+        width: 65%;
+      }
+
+      @include mobile {
+        padding: 14px 24px 38px 17px;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      top: 28px;
+      right: 22px;
+      padding: 0;
+      border: none;
+      background: transparent;
+
+      @include mobile {
+        top: 17px;
+        right: 12px;
+      }
+
+      &:hover .cart__item-cross,
+      &:focus .cart__item-cross {
+        color: $active;
+      }
+
+      &:active .cart__item-cross {
+        color: $active-light;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-cross {
+      color: #575757;
+      height: 18px;
+      width: 18px;
+
+      @include mobile {
+        height: 10px;
+        width: 10px;
+      }
+    }
+
+    &-title {
+      text-transform: uppercase;
+      @include font(24px, 29px);
+      color: $black;
+      font-weight: normal;
+      max-width: 262px;
+      margin: 0 0 41px;
+
+      @include mobile {
+        @include font(16px, 19px, 400);
+        margin: 0 0 25px;
+      }
+    }
+
+    &-details {
+      font-size: 22px;
+      line-height: 26px;
+      color: #575757;
+
+      &_pink {
+        color: $pink-text;
+      }
+
+      @include mobile {
+        @include font(14px, 16px, 400);
+      }
+    }
+
+    &-quantity {
+      width: 11%;
+      font-size: 18px;
+      line-height: 22px;
+      color: #656565;
+      text-align: center;
+      border: 1px solid #eaeaea;
+      margin: 0 0 0 24px;
+
+      @include mobile {
+        @include font(10px, 12px, 400);
+      }
+
+      &:focus {
+        outline: 2px solid $active;
+      }
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+    padding: 16px 40px;
+    background-color: $total-white;
+    border: 1px solid #a4a4a4;
+    margin: 32px 0 0 0;
+    transition: background-color 500ms, color 500ms, border-radius 500ms,
+      border 500ms;
+
+    @include mobile {
+      @include font(12px, 14px, 400);
+      margin: 0;
+      text-transform: none;
+      padding: 9px 17px;
+      width: 48%;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+
+      color: #575757;
+    }
+
+    &-wrp {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $active;
+      color: $total-white;
+      border: 1px solid $active-light;
+      outline: none;
+      border-radius: 10px;
+    }
+
+    &:active {
+      background-color: $active-light;
+      border: 1px solid $active;
+      color: $active;
+      outline: none;
+    }
   }
 }

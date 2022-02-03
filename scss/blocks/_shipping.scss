@@ -1,0 +1,95 @@
+.shipping {
+  margin: 0 0 58px;
+
+  @include tablet {
+    width: 49%;
+    margin: 0 16px 0 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin: 0 0 48px;
+  }
+
+  &-wrp {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__form {
+    &-input {
+      @include form-input;
+
+      &::placeholder {
+        @include form-input-placeholder;
+      }
+
+      &:hover,
+      &:focus {
+        @include form-input-hover-focus;
+      }
+    }
+
+    &-fieldset {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-legend {
+      @include form-legend;
+      text-transform: uppercase;
+    }
+
+    &-button {
+      text-transform: uppercase;
+      padding: 10px 15px;
+      margin: 24px 0 0 0;
+      border: 1px solid #a4a4a4;
+      background-color: $total-white;
+      @include font(11px, 13px, 300);
+      color: #4a4a4a;
+      justify-content: left;
+      transition: background-color 500ms, color 500ms, border-radius 500ms,
+        border 500ms;
+
+      @include mobile {
+        text-transform: none;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+
+        color: #575757;
+        @include font(11px, 13px, 400);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $active;
+        color: $total-white;
+        border: 1px solid $active-light;
+        border-radius: 10px;
+        outline: none;
+      }
+
+      &:active {
+        background-color: $active-light;
+        border: 1px solid $active;
+        color: $active;
+        outline: none;
+      }
+    }
+  }
+}

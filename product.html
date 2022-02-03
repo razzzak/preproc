@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrp container">
+            <div class="header__logo-form-wrp">
+                <a class="header__logo" href="index.html">
+                    <svg class="header__logo-icon" width="44" height="38" viewBox="0 0 44 38"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="44" height="38" fill="url(#pattern0)" />
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_128_53" transform="scale(0.0227273 0.0263158)" />
+                            </pattern>
+                            <image id="image0_128_53" width="44" height="38"
+                                xlink:href="data:image/png;base64,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" />
+                        </defs>
+                    </svg>
+                </a>
+                <div class="header__search">
+                    <svg class="header__menu-icon" width="27" height="28">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                    <form class="header__search-form" action="#">
+                        <input class="header__search-input" id="search" type="text" placeholder="Search for items">
+                        <label class="visually-hidden" for="search">search</label>
+                        <button class="header__search-button" type="submit">
+                            <svg class="header__menu-icon" width="27" height="28">
+                                <use xlink:href="img/sprite.svg#search"></use>
+                            </svg>
+
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="header__menu">
+                <button class="header__menu-btn" type="button" id="burger">
+                    <svg class="header__menu-icon" width="32" height="23">
+                        <use xlink:href="img/sprite.svg#burger-icon"></use>
+                    </svg>
+                </button>
+                <a class="header__link" href="registration.html">
+                    <svg class="header__menu-icon" width="29" height="29">
+                        <use xlink:href="img/sprite.svg#registration"></use>
+                    </svg></a>
+                <a class="header__link" href="cart.html">
+                    <svg class="header__menu-icon" width="33" height="29">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                    </svg></a>
+            </div>
+        </div>
+        <div id="header-shadow" class="header__shadow"> </div>
+        <nav id="menu" class="header__nav">
+            <div class="header__nav-wrp">
+                <button class="header__nav-cross" type="button">
+                    <svg class="header__nav-cross-icon" width="13" height="13">
+                        <use xlink:href="img/sprite.svg#cross"></use>
+                    </svg>
+                </button>
+                <h2 class="header__nav-title">menu</h2>
+                <ul class="header__nav-list">
+                    <li class="header__nav-item nav-item">
+                        <a class="nav-item__title" href="catalog.html">man</a>
+                        <ul class="nav-item__list">
+                            <li><a class="nav-item__link" href="#">Bags</a></li>
+                            <li><a class="nav-item__link" href="#">Denim</a></li>
+                            <li><a class="nav-item__link" href="#">T-Shirts</a></li>
+                            <li><a class="nav-item__link" href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item nav-item">
+                        <a class="nav-item__title" href="catalog.html">woman</a>
+                        <ul class="nav-item__list">
+                            <li><a class="nav-item__link" href="#">Accessories</a></li>
+                            <li>
+                                <a class="nav-item__link" href="#">Jackets &amp;&nbsp;Coats</a>
+                            </li>
+                            <li><a class="nav-item__link" href="#">Polos</a></li>
+                            <li><a class="nav-item__link" href="#">T-Shirts</a></li>
+                            <li><a class="nav-item__link" href="#">Shirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item nav-item">
+                        <a class="nav-item__title" href="catalog.html">kids</a>
+                        <ul class="nav-item__list">
+                            <li>
+                                <a class="nav-item__link" href="#">Jackets &amp;&nbsp;Coats</a>
+                            </li>
+                            <li><a class="nav-item__link" href="#">Accessories</a></li>
+                            <li><a class="nav-item__link" href="#">Polos</a></li>
+                            <li><a class="nav-item__link" href="#">T-Shirts</a></li>
+                            <li><a class="nav-item__link" href="#">Shirts</a></li>
+                            <li><a class="nav-item__link" href="#">Bags</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product">
+            <!--bootstrap breadcrumb-->
+            <section class="page">
+                <div class="container page__product">
+                    <h1 class="page-title">new arrivals</h1>
+                    <nav aria-label="breadcrumb">
+                        <h2 class="visually-hidden">breadcrumb</h2>
+                        <ol class="product__breadcrumb">
+                            <li class="product__breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="product__breadcrumb-item"><a href="#">men</a></li>
+                            <li class="product__breadcrumb-item active" aria-current="page">new arrivals</li>
+                        </ol>
+                    </nav>
+                </div>
+            </section>
+            <!-- bootstrap carousel -->
+            <section class="product__carousel">
+                <h2 class="visually-hidden">carousel</h2>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active carousel-item-wrp">
+                            <img src="./img/slider.jpg" class="d-block carousel-item__img" alt="slider-image"
+                                width="597" height="724">
+                        </div>
+                        <div class="carousel-item carousel-item-wrp">
+                            <img src="./img/slider.jpg" class="d-block  carousel-item__img" alt="slider-image"
+                                width="597" height="724">
+                        </div>
+                        <div class="carousel-item carousel-item-wrp">
+                            <img src="./img/slider.jpg" class="d-block carousel-item__img" alt="slider-image"
+                                width="597" height="724">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev carousel-control-wrp" type="button"
+                        data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <i class="fas fa-chevron-left fas-wrp"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next carousel-control-wrp" type="button"
+                        data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <i class="fas fa-chevron-right fas-wrp"></i>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            <!-- bootstrap dropdowns -->
+            <section class="product__item container">
+                <h2 class="product__item-title">women collection</h2>
+                <hr class="product__item-title-hr">
+                <h3 class="product__item-subtitle">moschino cheap and chic</h3>
+                <p class="product__item-description">Compellingly actualize fully researched processes before proactive
+                    outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
+                    Completely visualize parallel core competencies rather than exceptional portals.</p>
+                <p class="product__item-price">$561</p>
+                <hr class="product__item-hr">
+                <div class="product__dropdown">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-button dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            choose color
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">red</a></li>
+                            <li><a class="dropdown-item" href="#">blue</a></li>
+                            <li><a class="dropdown-item" href="#">black</a></li>
+                            <li><a class="dropdown-item" href="#">white</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-button dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            choose size
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">xs</a></li>
+                            <li><a class="dropdown-item" href="#">s</a></li>
+                            <li><a class="dropdown-item" href="#">m</a></li>
+                            <li><a class="dropdown-item" href="#">l</a></li>
+                            <li><a class="dropdown-item" href="#">xl</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-button dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            quantity
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">1</a></li>
+                            <li><a class="dropdown-item" href="#">2</a></li>
+                            <li><a class="dropdown-item" href="#">3</a></li>
+                            <li><a class="dropdown-item" href="#">4</a></li>
+                            <li><a class="dropdown-item" href="#">5</a></li>
+                            <li><a class="dropdown-item" href="#">6</a></li>
+                            <li><a class="dropdown-item" href="#">7</a></li>
+                            <li><a class="dropdown-item" href="#">8</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="product__item-button" type="button">Add to Cart</button>
+            </section>
+            <!--bootstrap grid-->
+            <section class="product__grid">
+                <h2 class="visually-hidden">products</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-wrp"> <img class="product__grid-img" src="./img/product-4.jpg"
+                                    alt="product-1" width="360" height="420" />
+                                <div class="product__grid-info">
+                                    <h3 class="product__grid-title">
+                                        ellery x&nbsp;m&rsquo;o capsule
+                                    </h3>
+                                    <p class="product__grid-text">
+                                        Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda
+                                        Operandi.
+                                    </p>
+                                    <p class="product__grid-price">$52.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-wrp">
+                                <img class="product__grid-img" src="./img/product-3.jpg" alt="product-2" width="360"
+                                    height="420" />
+                                <div class="product__grid-info">
+                                    <h3 class="product__grid-title">
+                                        ellery x&nbsp;m&rsquo;o capsule
+                                    </h3>
+                                    <p class="product__grid-text">
+                                        Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda
+                                        Operandi.
+                                    </p>
+                                    <p class="product__grid-price">$52.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-wrp">
+                                <img class="product__grid-img" src="./img/product-6.jpg" alt="product-3" width="360"
+                                    height="420" />
+                                <div class="product__grid-info">
+                                    <h3 class="product__grid-title">
+                                        ellery x&nbsp;m&rsquo;o capsule
+                                    </h3>
+                                    <p class="product__grid-text">
+                                        Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda
+                                        Operandi.
+                                    </p>
+                                    <p class="product__grid-price">$52.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+  <footer class="footer">
+    <div class="footer__subscribe">
+      <div class="footer__subscribe-wrp container">
+        <div class="footer__subscribe-creator">
+          <img class="footer__subscribe-img" src="./img/creator.png" alt="creator" width="96" height="96" />
+          <blockquote class="footer__subscribe-quote">
+            &laquo;Vestibulum quis porttitor dui! Quisque viverra
+            nunc&nbsp;mi,
+            <span class="footer__subscribe-quote_italics">
+              a&nbsp;pulvinar purus condimentum&raquo;</span>
+          </blockquote>
+        </div>
+        <form class="footer__subscribe-form" action="#">
+          <h2 class="footer__subscribe-title">
+            <span class="footer__subscribe-title_bold"> subscribe </span> for
+            our newletter and promotion
+          </h2>
+          <div class="footer__subscribe-form_wrp">
+            <input class="footer__subscribe-input" id="subscribe-email" type="email" placeholder="Enter Your Email" />
+            <label class="visually-hidden" for="subscribe-email">subscribe</label>
+            <button class="footer__subscribe-button" type="submit">
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-wrp container">
+        <p class="footer__rights">
+          &copy;&nbsp;2021 Brand All Rights Reserved.
+        </p>
+        <div class="footer__social-networks">
+          <h2 class="visually-hidden">
+            social networks
+          </h2>
+          <ul class="footer__social-networks-list">
+            <li class="footer__social-networks-item">
+              <a class="footer__social-networks-link" href="https://www.facebook.com/" target="_blank">
+                <svg class="footer__social-networks-icon" width="9" height="15">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-networks-item">
+              <a class="footer__social-networks-link" href="https://www.instagram.com/" target="_blank">
+                <svg class="footer__social-networks-icon" width="16" height="15">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg></a>
+            </li>
+            <li class="footer__social-networks-item">
+              <a class="footer__social-networks-link" href="https://www.pinterest.ru/" target="_blank">
+                <svg class="footer__social-networks-icon" width="13" height="16">
+                  <use xlink:href="img/sprite.svg#pinterest"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-networks-item">
+              <a class="footer__social-networks-link" href="https://twitter.com/?lang=ru" target="_blank">
+                <svg class="footer__social-networks-icon" width="17" height="14">
+                  <use xlink:href="img/sprite.svg#twitter"></use>
+                </svg></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
