@@ -1,0 +1,62 @@
+.total-price {
+  background: #f5f3f3;
+  text-transform: uppercase;
+  padding: 40px;
+  text-align: right;
+
+  @include tablet {
+    width: 49%;
+    margin: 39px 0 0 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin: 0;
+    padding: 40px;
+  }
+
+  &__text {
+    font-size: 11px;
+    line-height: 13px;
+    color: #4a4a4a;
+    margin: 0 0 12px;
+  }
+
+  &__result {
+    font-size: 16px;
+    line-height: 19px;
+    color: $total-black;
+
+    &_pink {
+      color: $pink-text;
+    }
+  }
+
+  &__hr {
+    border: 1px solid #e2e2e2;
+    margin: 21px 0 17px;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    @include font(16px, 19px, 300);
+    color: $total-white;
+    background: $pink-text;
+    border: none;
+    padding: 15px 40px;
+    width: 100%;
+    transition: background 500ms, border-radius 500ms;
+
+    &:hover,
+    &:focus {
+      background: #e05c6e;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    &:active {
+      background: $hover;
+      outline: none;
+    }
+  }
+}

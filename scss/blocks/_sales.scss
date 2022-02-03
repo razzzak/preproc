@@ -1,129 +1,107 @@
-.sales {
-  &__item {
-    max-width: 360px;
-    min-height: 260px;
+.sales__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mobile {
+    justify-content: center;
+  }
+}
+
+.sales__item {
+  width: 31%;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  @include tablet {
+    min-height: 167px;
+  }
+
+  @include mobile {
+    width: 95%;
+    min-height: 247px;
+    margin: 0 0 32px;
+  }
+
+  &-link {
+    display: block;
+    text-decoration: none;
+    transition: transform 500ms;
+  }
+
+  &_woman {
+    background-image: url(../img/item-woman.jpg);
+    background-size: cover;
+    background-color: $pink-color;
+  }
+
+  &_man {
+    background-image: url(../img/item-man.jpg);
+    background-size: cover;
+    background-color: $pink-color;
+  }
+
+  &_kids {
+    background-image: url(../img/item-kids.jpg);
+    background-size: cover;
+    background-color: $pink-color;
+  }
+
+  &_accesories {
+    background-image: url(../img/item-accesories.jpg);
+    background-size: cover;
+    background-color: $pink-color;
+    width: 100%;
+    margin: 30px 0 0;
+    min-height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*border: 1px solid gold;*/
     flex-direction: column;
-  }
 
-  &__list {
-    margin: 64px 0 0 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    @include mobile {
-      flex-direction: column;
-    }
-  }
-
-  &__item--woman {
-    background-image: url(../img/for-women.jpg);
-    background-repeat: no-repeat;
-  }
-
-  &__item--men {
-    background-image: url(../img/for-men.jpg);
-    background-repeat: no-repeat;
-  }
-
-  &__item--kids {
-    background-image: url(../img/for-kids.jpg);
-    background-repeat: no-repeat;
-
-    @include mobile {
-      margin: 0 0 32px 0;
-    }
-  }
-
-  &__item--shoes {
-    max-width: 100%;
-    margin: 30px 0 0 0;
-    background-image: url(../img/acces.jpg);
-    background-repeat: no-repeat;
-
-    @include mobile {
-      //min-width: 343px;
-      margin: 0 auto;
-      min-width: 100%;
-    }
-  }
-
-  &__item-title {
-    color: #fff;
-    text-transform: uppercase;
-  }
-
-  &__item-text {
-    @include font(24px, 29px, 700);
-    text-transform: uppercase;
-    color: $pink-color;
-  }
-
-  &__item-text--shoes {
-    padding: 0 0 56px 0;
-  }
-
-  &__cart {
-    width: 30%;
     @include tablet {
-      padding: 32px 0 0 0;
+      margin: 19px 0 0;
     }
 
     @include mobile {
-      width: 91%;
-      margin: 0 auto;
+      margin: 0;
+      width: 95%;
+      min-height: 111px;
     }
   }
 
-  /*-------Затемнение Sales---------*/
-
-  &__cart-overlay {
-    position: relative;
+  &-text {
+    text-transform: uppercase;
+    @include font(16px, 19px, 400);
+    color: $total-white;
   }
 
-  &__cart-shoes-overlay {
-    position: relative;
+  &-title {
+    text-transform: uppercase;
+    @include font(24px, 29px, 700);
+    color: $pink-text;
   }
+}
 
-  &__cart-overlay:before {
-    content: "";
-    width: 100%;
-    min-height: 260px;
-    background-color: #211616;
-    position: absolute;
-    top: 0;
-    display: none;
-    opacity: 70%;
-  }
+.sales__item-link:hover .sales__item-title,
+.sales__item-link:focus .sales__item-title {
+  color: #a0515b;
+}
 
-  &__cart:hover .sales__cart-overlay:before {
-    display: block;
-  }
+.sales__item-link:hover .sales__item-text,
+.sales__item-link:focus .sales__item-text {
+  color: $active-light;
+}
 
-  &__cart-shoes {
-    width: 100%;
-  }
+.sales__item-link:active .sales__item-title,
+.sales__item-link:active .sales__item-text {
+  color: $active;
+}
 
-  &__cart-shoes-overlay:before {
-    content: "";
-    width: 100%;
-    min-height: 180px;
-    background: #211616;
-    position: absolute;
-    top: 0;
-    display: none;
-    opacity: 70%;
-  }
-
-  &__cart-shoes:hover &__cart-shoes-overlay:before {
-    display: block;
-  }
-
-  &__cart-shoes:hover &__text {
-    display: block;
-  }
+.sales__item-link:hover {
+  transform: scale(1.07);
 }

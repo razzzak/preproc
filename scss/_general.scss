@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/lato-black.woff2) format("woff2"),
+    url(../fonts/lato-black.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/lato-bold.woff2) format("woff2"),
+    url(../fonts/lato-bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/lato-light.woff2) format("woff2"),
+    url(../fonts/lato-light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/lato-lightitalic.woff2) format("woff2"),
+    url(../fonts/lato-lightitalic.woff) format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/lato-regular.woff2) format("woff2"),
+    url(../fonts/lato-regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Lato";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.container {
+  width: 71%;
+  margin: 0 auto;
+  padding: 0;
+
+  @include tablet {
+    width: 95%;
+  }
+
+  @include mobile {
+    width: 95%;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+a:hover,
+a:focus,
+a:active,
+button:active,
+button:focus,
+button:hover {
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+button,
+input,
+::placeholder {
+  font-family: "Lato";
+}
+
+.page {
+  @include page;
+}
+
+.page-title {
+  @include page-title;
+}
+
+.sprite {
+  display: none;
+}

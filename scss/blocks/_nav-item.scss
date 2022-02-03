@@ -1,0 +1,35 @@
+.nav-item__title {
+  text-decoration: none;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: $pink-text;
+  margin: 0 33px;
+}
+
+.nav-item__list {
+  margin: 12px 0 9px 55px;
+}
+
+.nav-item__link {
+  line-height: 17px;
+  color: #6f6e6e;
+  margin: 0 0 11px 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-item__title:hover {
+  color: $hover;
+}
+
+.nav-item__title:active {
+  color: $active;
+}
+
+.nav-item__link:hover {
+  color: $black;
+}
+
+.nav-item__link:active {
+  color: $active-light;
+}

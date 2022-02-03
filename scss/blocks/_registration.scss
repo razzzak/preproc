@@ -1,0 +1,182 @@
+.registration {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 64px auto 96px;
+
+  @include tablet {
+    margin: 40px auto 96px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.registration__form {
+  width: 31%;
+
+  @include tablet {
+    width: 49%;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+
+  &-legend {
+    @include form-legend;
+  }
+}
+
+.registration__form-input {
+  @include form-input;
+  width: calc(100% - 17px);
+
+  &::placeholder {
+    @include form-input-placeholder;
+  }
+
+  &:hover,
+  &:focus {
+    @include form-input-hover-focus;
+  }
+}
+
+.registration__form-fieldset {
+  margin: 31px 0 33px;
+  display: flex;
+  align-items: center;
+}
+
+.registration__form-fieldset input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #a4a4a4;
+  outline: none;
+  margin: 0;
+}
+
+.registration__form-fieldset input[type="radio"]:checked {
+  background-color: $pink-text;
+  border: none;
+}
+
+.registration__form-fieldset input[type="radio"]:hover,
+.registration__form-fieldset input[type="radio"]:focus {
+  background-color: $pink-color;
+  border: none;
+}
+
+.registration__form-fieldset label {
+  margin: 0 20px 0 10px;
+
+  @include tablet {
+    @include font(11px, 13px, 300);
+  }
+}
+
+.registration__form-text {
+  font-weight: 300;
+  font-size: 13px;
+  color: #b1b1b1;
+  margin: 15px 0 39px;
+}
+
+.registration__form-button {
+  background-color: $pink-text;
+  border: none;
+  color: $total-white;
+  text-transform: uppercase;
+  padding: 16px 66px 16px 29px;
+  position: relative;
+  font-weight: normal;
+  line-height: 17px;
+  transition: background 500ms, border-radius 500ms;
+}
+
+.registration__form-button:hover,
+.registration__form-button:focus {
+  background: #e05c6e;
+  border-radius: 10px;
+  outline: none;
+}
+
+.registration__form-button:active {
+  background: $hover;
+  outline: none;
+}
+
+.registration__form-button::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 121px;
+  bottom: auto;
+  right: auto;
+  transform: translateY(-50%);
+  background: url(../img/arrow.svg) no-repeat;
+  width: 17px;
+  height: 10px;
+}
+
+.registration__loyality {
+  width: 57%;
+
+  @include tablet {
+    width: 48%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &-title {
+    text-transform: uppercase;
+    color: $total-black;
+    @include font(24px, 29px, 300);
+
+    @include tablet {
+      @include font(16px, 19px, 300);
+    }
+  }
+
+  &-text {
+    margin: 22px 0 21px;
+    @include font(24px, 29px, 300);
+
+    @include tablet {
+      @include font(16px, 19px, 300);
+    }
+  }
+
+  &-list {
+    @include font(24px, 29px, 300);
+    margin-left: 42px;
+
+    @include tablet {
+      @include font(16px, 19px, 300);
+    }
+  }
+
+  &-item {
+    position: relative;
+    margin: 0 0 16px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url(../img/mark.svg);
+      width: 20px;
+      height: 16px;
+      left: -42px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.filter-list-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  color: #6f6e6e;
+  border-width: 0px 0px 1px 5px;
+  border-color: #ef5b70;
+  border-bottom-color: #ebebeb;
+  margin: 16px 0 0;
+  background-color: transparent;
+  padding: 11px;
+}
+
+.filter-list-btn:hover {
+  color: #ef5b70;
+}
+
+.filter-list__items {
+  padding: 24px 34px 8px;
+}
+
+.filter-list__link {
+  text-decoration: none;
+  color: #6f6e6e;
+  margin: 0 0 11px;
+  display: inline-block;
+}
+
+.filter-btn {
+  position: absolute;
+  padding: 0;
+  text-transform: uppercase;
+  @include font(14px, 16px, 600);
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  display: flex;
+  z-index: 4;
+  margin: 0 0 0 16px;
+  height: 44px;
+  width: fit-content;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.filter-btn_mobile {
+  display: none;
+  position: absolute;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  z-index: 4;
+  width: fit-content;
+
+  @include mobile {
+    display: block;
+    left: 10px;
+  }
+}
+
+.filter-btn_mobile:hover,
+.filter-btn_mobile:focus {
+  color: #ef5b70;
+  fill: #ef5b70;
+}
+
+.filter {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: -13px;
+  background: #ffffff;
+  box-shadow: 6px 4px 35px #00000036;
+  padding: 29px 16px 16px;
+  z-index: 3;
+  grid-column: 1 / 2;
+
+  @include mobile {
+    top: -10px;
+    grid-column: 1 / 5;
+  }
+}
+
+.filter-display-block {
+  display: block;
+}
+
+.filter-btn_wrp {
+  margin: 0 11px 0 0;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: #ef5b70;
+  fill: #ef5b70;
+}
